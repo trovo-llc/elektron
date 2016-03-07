@@ -1,0 +1,52 @@
+TROVO LLC LICENSE AGREEMENT
+
+By clicking on Accept, you agree to the following terms and conditions:
+
+Trovo LLC hereby issues you a limited, non-exclusive, non-transferable license to use the Metrics Workstation, Metrics Author, and any Metrics API software systems (collectively, the software) subject to the limitations described in this agreement.
+
+If you (or your employer) have a separate written agreement with Trovo LLC, the terms marked “(a) Separate Agreement” apply; if you are using the software for testing purposes only without any separate agreement with Trovo LLC, the terms marked “(b) Test License” apply; in all cases, the terms marked “(c) In All Cases” apply.
+
+(a) Separate Agreement
+
+DEFINITIONS. “Services Agreements” means any existing written agreements between (a) you or your employer and (b) Trovo LLC through which Trovo LLC provides software or services to you or your employer.
+
+PERMITTED USE. You agree to use the software only as part of services rendered to you by Trovo LLC pursuant to Services Agreements, and to restrict your use of the software to remain within the scope of such Services Agreements.
+
+LICENSING FEES. As provided in the Services Agreements.
+
+TERM AND TERMINATION. This license will terminate when no Services Agreements remain in force (this license is coterminous with the last remaining agreement among the Services Agreements). Upon being notified of termination, you agree to delete any copies of the software on any computer systems under your control.
+
+(b) Test License
+
+PERMITTED USE. You agree to use the software only for test purposes. You agree not to rely on any results generated using the software. You agree not to incorporate the software into any production process or routine business workflow or operations.
+
+LICENSING FEES. You may use the software free of charge.
+
+TERM AND TERMINATION. The earlier of (a) 180 days following your initial installation of the software or (b) written termination notice from Trovo LLC. Upon termination, you agree to delete any copies of the software on any computer systems under your control.
+
+(c) In All Cases
+
+OWNERSHIP. You acknowledge that the software is the property of Trovo LLC (except certain components provided by Trovo LLC pursuant to (a) the Eclipse Public License v1.0 at http://www.eclipse.org/legal/epl-v10.html, (b) the Apache License v2.0 at http://www.apache.org/licenses/LICENSE-2.0.html, or (c) the JCraft license, included in its entirety below). You agree not to share, distribute, reverse-engineer or copy the software.
+
+NO WARRANTY; NO LIABILITY; NO DAMAGES. Trovo LLC makes no representation or warranty whatsoever, express or implied, as to the the software or any data accessed through the software, including any warranty of accuracy, merchantability, title, non-infringement or fitness for a particular purpose. You specifically disclaim any such warranty. Trovo LLC makes no promise that the software or related data will remain available to you following the termination of this license. Trovo LLC is not liable for any damages of any kind arising from this agreement or from your use of the software. The limitations of Trovo LLC's liability hereunder shall apply even if any remedy available to you fails of its essential purpose.
+
+EXPORT RESTRICTIONS. All parties shall comply with any applicable export or import laws and restrictions and regulations of any United States or foreign government, agency or authority with respect to the software and its use. 
+
+If you have questions regarding this license, contact ops@nne-software.com.
+
+The entire JCraft license appears below:
+
+JCRAFT LICENSE -- applies to "JSch" components that support secure FTP
+
+Copyright (c) 2002-2012 Atsuhiko Yamanaka, JCraft,Inc. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+3. The names of the authors may not be used to endorse or promote products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESSED OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL JCRAFT, INC. OR ANY CONTRIBUTORS TO THIS SOFTWARE BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+

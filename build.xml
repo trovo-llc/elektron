@@ -1,0 +1,69 @@
+<!--
+	Ant build file for compiling and running api examples.  Install apache ant from: http://ant.apache.org
+-->
+<project name="Trovo Elektron API Examples" default="compile" basedir=".">
+
+	<!-- Properties -->
+	<property name="build.dir">build</property>
+	<property name="classes.dir">${build.dir}/classes</property>
+	<property name="lib.dir">lib</property>
+	<property name="config.dir">config</property>
+	<property name="user">root</property>
+
+	<!-- Common Classpath -->
+	<path id="project.classpath">
+		<pathelement path="${classes.dir}"/>
+		<pathelement path="${config.dir}"/>
+		<fileset dir="${lib.dir}">
+			<include name="**/*.jar"/>
+		</fileset>
+	</path>
+	
+	<!-- Compile Examples -->
+	<target name="compile">
+		<mkdir dir="${classes.dir}"/>
+		<javac srcdir="src" destdir="${classes.dir}">
+			<classpath refid="project.classpath"/>
+		</javac>
+	</target>
+
+	<!-- Run Examples -->
+	<target name="run-client" depends="compile">
+		<java fork="true" classname="com.metrics.tr.elektron.examples.ElektronClientExample">
+			<classpath refid="project.classpath"/>
+			<arg value="${user}"/>
+		</java>
+	</target>
+	<target name="run-bench" depends="compile">
+		<java fork="true" classname="com.metrics.tr.elektron.examples.BenchmarkCurveExample">
+			<classpath refid="project.classpath"/>
+			<arg value="${user}"/>
+		</java>
+	</target>
+	<target name="run-conn" depends="compile">
+		<java fork="true" classname="com.metrics.tr.elektron.examples.ElektronConnectionExample">
+			<classpath refid="project.classpath"/>
+			<arg value="${user}"/>
+		</java>
+	</target>
+	<target name="run-multi" depends="compile">
+		<java fork="true" classname="com.metrics.tr.elektron.examples.ElektronMultiContributorExample">
+			<classpath refid="project.classpath"/>
+			<arg value="${user}"/>
+		</java>
+	</target>	
+	<target name="run-trace" depends="compile">
+		<java fork="true" classname="com.metrics.tr.elektron.examples.ElektronTraceFeedExample">
+			<classpath refid="project.classpath"/>
+			<arg value="${user}"/>
+		</java>
+	</target>	
+		
+	<!-- Clean -->
+	<target name="clean">
+		<delete dir="${build.dir}"/>
+		<delete>
+			<fileset dir="." includes="RFA*.log"/>
+		</delete>		
+	</target>
+</project>
