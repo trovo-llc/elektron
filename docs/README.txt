@@ -1,39 +1,64 @@
+========
+OVERVIEW
+========
 This project contains several examples of using Trovo's companion API to Elektron.  The project is organized as:
 
+/bin (scripts to run the examples)
 /src (source of the examples)
 /lib (required JARs, including the trovo-elektron-api JAR)
-/config (log4j config)
+/conf (log4j config)
 /docs
 	README.txt (this file)
 	/api (javadocs for the API)
-build.xml (ant build file used to compile and run the examples)
+build.xml (ant build file optionally used to compile and run the examples)
 
-To run the examples, you must install Apache Ant, available at: http://ant.apache.org
+========
+EXAMPLES
+========
+You can see source code for the examples in /src.  Here's a summary:
 
-Each example takes a single argument specifying the user to connect to Elektron as.  If you are unsure what the correct user is, check with the administrator of your Elektron connection or try "root" (build.xml defaults to "root").
+BenchmarkCurveExample.java
+- Retrieves a benchmark interest rate curve in one step; echoes updated interest rates to the console.
 
-For example, to run the ElektronClientExample as user "jdoe":
-- >ant run-client -Duser=jdoe
+ElektronClientExample.java
+- Listens to an ElektronClient to acquire market data; resulting messages are low-level objects received directly from Elektron.
 
-Or, to run as user "root" (the default), simply:
-- >ant run-client
+ElektronConnectionExample.java
+- Listens to an ElektronConnection to acquire market data; resulting messages are high-level objects that are consistently mapped, strongly typed, and validated.
 
-Each example uses its own ant target:
+ElektronMultiContributorExample.java
+- Listens to an ElektronConnection to acquire market data from multiple contributors. Resulting messages will be limited by the access privileges of the underlying Elektron account.
+- Resulting messages are high-level objects that are consistently mapped, strongly typed, and validated.
 
-BenchmarkCurveExample
-- >ant run-bench
+ElektronTraceFeedExample.java
+- Listens to an ElektronConnection to acquire FINRA TRACE trade messages (will fail if related Elektron account is not provisioned for FINRA TRACE data).
+- Attempts to retrieve both US Corporate and US Govt Agency trades.
 
-ElektronConnectionExample
-- >ant run-conn
+============
+RUN EXAMPLES
+============
+Each example takes a single argument specifying the user to connect to Elektron as.  If you are unsure what the correct user is, check with the administrator of your Elektron connection or try "root".
 
-ElektronMultiContributorExample
-- >ant run-multi
+Scripts are provided to run each of the examples on multiple platforms.  For example, to run the ElektronClientExample example as user "jdoe" from a command prompt on Windows:
+- >cd bin
+- >elektron-client-example.bat jdoe
 
-ElektronTraceFeedExample
-- >ant run-trace
+Or, to run from a terminal on Unix or Mac:
+- >cd bin
+- >./elektron-client-example jdoe
 
-ElektronClientExample
-- >ant run-client
+================================
+COMPILING/RUNNING VIA APACHE ANT
+================================
+If you wish to do your own compiling and running, you can do so easily with Apache Ant, available at http://ant.apache.org.
 
+By using the provided build.xml, you can compile (all platforms) with:
+- >ant compile
 
+And run with:
+- >ant benchmark-curve-example -Duser=jdoe
+
+==========
+QUESTIONS?
+==========
 If you have questions, contact Trovo at ops@trovo.io.

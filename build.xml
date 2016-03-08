@@ -4,10 +4,10 @@
 <project name="Trovo Elektron API Examples" default="compile" basedir=".">
 
 	<!-- Properties -->
-	<property name="build.dir">build</property>
-	<property name="classes.dir">${build.dir}/classes</property>
+	<property name="bin.dir">bin</property>
+	<property name="classes.dir">${bin.dir}/classes</property>
 	<property name="lib.dir">lib</property>
-	<property name="config.dir">config</property>
+	<property name="config.dir">conf</property>
 	<property name="user">root</property>
 
 	<!-- Common Classpath -->
@@ -28,31 +28,31 @@
 	</target>
 
 	<!-- Run Examples -->
-	<target name="run-client" depends="compile">
-		<java fork="true" classname="com.metrics.tr.elektron.examples.ElektronClientExample">
-			<classpath refid="project.classpath"/>
-			<arg value="${user}"/>
-		</java>
-	</target>
-	<target name="run-bench" depends="compile">
+	<target name="benchmark-curve-example" depends="compile">
 		<java fork="true" classname="com.metrics.tr.elektron.examples.BenchmarkCurveExample">
 			<classpath refid="project.classpath"/>
 			<arg value="${user}"/>
 		</java>
 	</target>
-	<target name="run-conn" depends="compile">
+	<target name="elektron-client-example" depends="compile">
+		<java fork="true" classname="com.metrics.tr.elektron.examples.ElektronClientExample">
+			<classpath refid="project.classpath"/>
+			<arg value="${user}"/>
+		</java>
+	</target>
+	<target name="elektron-connection-example" depends="compile">
 		<java fork="true" classname="com.metrics.tr.elektron.examples.ElektronConnectionExample">
 			<classpath refid="project.classpath"/>
 			<arg value="${user}"/>
 		</java>
 	</target>
-	<target name="run-multi" depends="compile">
+	<target name="elektron-multi-contributor-example" depends="compile">
 		<java fork="true" classname="com.metrics.tr.elektron.examples.ElektronMultiContributorExample">
 			<classpath refid="project.classpath"/>
 			<arg value="${user}"/>
 		</java>
 	</target>	
-	<target name="run-trace" depends="compile">
+	<target name="elektron-trace-feed-example" depends="compile">
 		<java fork="true" classname="com.metrics.tr.elektron.examples.ElektronTraceFeedExample">
 			<classpath refid="project.classpath"/>
 			<arg value="${user}"/>
@@ -61,7 +61,7 @@
 		
 	<!-- Clean -->
 	<target name="clean">
-		<delete dir="${build.dir}"/>
+		<delete dir="${bin.dir}"/>
 		<delete>
 			<fileset dir="." includes="RFA*.log"/>
 		</delete>		
